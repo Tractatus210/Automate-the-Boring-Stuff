@@ -1,0 +1,15 @@
+# Implements the "collatz" sequence on any number input by the user,
+# printing all values until the value 1 is reached.
+
+def collatz(number):
+    if number % 2 == 0:
+        return number // 2
+    else:
+        return (3 * number) + 1
+number = int(input('Enter a number: '))
+print(number)
+while True:
+    number = collatz(number)
+    print(number)
+    if number == 1:
+        break
